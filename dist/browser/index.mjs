@@ -80,7 +80,8 @@ var fetchApi = {
         return data.result || "No Results Found";
       } else {
         const arrayBuffer = await response.arrayBuffer();
-        return arrayBuffer;
+        const NodeBuffer = globalThis.Buffer;
+        return NodeBuffer ? NodeBuffer.from(arrayBuffer) : arrayBuffer;
       }
     } catch (error) {
       console.error("[NexOracle APIs Error]:", error);

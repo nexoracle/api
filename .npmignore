@@ -2,7 +2,7 @@ node_modules/
 tsconfig.json
 tsup.config.ts
 todo.txt
-pnpm-lock.yaml
+pnpm*
 .npmrc
 .github/
 m.html
